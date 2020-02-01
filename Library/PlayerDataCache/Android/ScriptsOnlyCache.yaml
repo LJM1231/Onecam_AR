@@ -1,24 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AugmentedImageController
+    - AugmentedImageVisualizer
     - GoogleARCore.ARCoreBackgroundRenderer
     - GoogleARCore.ARCoreCameraConfigFilter
     - GoogleARCore.ARCoreSession
     - GoogleARCore.ARCoreSessionConfig
-    - GoogleARCore.EnvironmentalLight
-    - GoogleARCore.Examples.Common.DetectedPlaneGenerator
-    - GoogleARCore.Examples.Common.DetectedPlaneVisualizer
-    - GoogleARCore.Examples.Common.PlaneDiscoveryGuide
-    - GoogleARCore.Examples.Common.PointcloudVisualizer
-    - GoogleARCore.Examples.Common.RawImageVideoPlayer
-    - GoogleARCore.Examples.ObjectManipulation.ElevationManipulator
-    - GoogleARCore.Examples.ObjectManipulation.ManipulationSystem
-    - GoogleARCore.Examples.ObjectManipulation.ObjectManipulationController
-    - GoogleARCore.Examples.ObjectManipulation.PawnManipulator
-    - GoogleARCore.Examples.ObjectManipulation.RotationManipulator
-    - GoogleARCore.Examples.ObjectManipulation.ScaleManipulator
-    - GoogleARCore.Examples.ObjectManipulation.SelectionManipulator
-    - GoogleARCore.Examples.ObjectManipulation.TranslationManipulator
+    - GoogleARCore.AugmentedImageDatabase
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -27,19 +16,13 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.SpatialTracking.dll:
     - UnityEngine.SpatialTracking.TrackedPoseDriver
-    UnityEngine.UI.dll:
-    - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
-    - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
-    - UnityEngine.UI.RawImage
-    - UnityEngine.UI.Text
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
-    Assets/GoogleARCore/Examples/ObjectManipulation/Scenes/ObjectManipulation.unity:
+    Assets/LJM/Scenes/LJM.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -58,7 +41,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 84
+    - Class: 81
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -67,74 +50,24 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9730}
+      Script: {instanceID: 10438}
     - Class: 114
-      Script: {instanceID: 9976}
+      Script: {instanceID: 10726}
     - Class: 114
-      Script: {instanceID: 10028}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 11422}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 11534}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 11790}
     - Class: 114
-      Script: {instanceID: 10464}
+      Script: {instanceID: 13978}
     - Class: 114
-      Script: {instanceID: 10524}
-    - Class: 114
-      Script: {instanceID: 10724}
-    - Class: 114
-      Script: {instanceID: 10898}
-    - Class: 114
-      Script: {instanceID: 11022}
-    - Class: 114
-      Script: {instanceID: 11038}
-    - Class: 114
-      Script: {instanceID: 11062}
-    - Class: 114
-      Script: {instanceID: 11132}
-    - Class: 114
-      Script: {instanceID: 11144}
-    - Class: 114
-      Script: {instanceID: 11250}
-    - Class: 114
-      Script: {instanceID: 11336}
-    - Class: 114
-      Script: {instanceID: 11420}
-    - Class: 114
-      Script: {instanceID: 11472}
-    - Class: 114
-      Script: {instanceID: 11620}
-    - Class: 114
-      Script: {instanceID: 11632}
-    - Class: 114
-      Script: {instanceID: 11636}
-    - Class: 114
-      Script: {instanceID: 11738}
-    - Class: 114
-      Script: {instanceID: 11786}
-    - Class: 114
-      Script: {instanceID: 11844}
-    - Class: 114
-      Script: {instanceID: 12028}
-    - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 14020}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 120
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 157
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -905,7 +838,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d95a401ad0c784cabf21aa133bd03786
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AugmentedImageVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 5ede0a600af8467ea9d0bf098e467e7f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AugmentedImageController
   platform: 13
   scenePathNames:
-  - Assets/GoogleARCore/Examples/ObjectManipulation/Scenes/ObjectManipulation.unity
-  playerPath: C:/Users/User/github_up/Onecam_AR2/LJM2.apk
+  - Assets/LJM/Scenes/LJM.unity
+  playerPath: C:/Users/User/github_up/Onecam_AR/LJM0201_1.apk

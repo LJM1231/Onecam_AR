@@ -13,7 +13,6 @@ public class AugmentedImageController : MonoBehaviour
 
     private readonly List<AugmentedImage> _images = new List<AugmentedImage>();
 
-
     private void Update()
     {
         if (Session.Status != SessionStatus.Tracking)
@@ -29,14 +28,38 @@ public class AugmentedImageController : MonoBehaviour
     {
         foreach (var image in _images)
         {
-            var visualizer = GetVisualalizer(image);
+            var visualizer = GetVisualizer(image);
+
+            if(image.TrackingState == TrackingState.Tracking && visualizer == null)
+            {
+                AddVisualizer(image);
+            }
+            else if (image.TrackingState == TrackingState.Stopped && visualizer != null)
+            {
+                RemoveVisualizer(image, visualizer);
+            }
+
         }
     }
 
-    private AugmentedImageVisualizer GetVisualalizer(AugmentedImage image)
+    private void RemoveVisualizer(AugmentedImage image, AugmentedImageVisualizer visualizer)
+    {
+        _visualizers.Remove(image.DatabaseIndex);
+        Destroy(visualizer.gameObject);
+    }
+
+    private void AddVisualizer(AugmentedImage image)
+    {
+        var anchor = image.CreateAnchor(image.CenterPose);
+        var visualizer = Instantiate(_augmentedImageVisualizer, anchor.transform);
+        visualizer.Image = image;
+        _visualizers.Add(image.DatabaseIndex, visualizer);
+    }
+
+    private AugmentedImageVisualizer GetVisualizer(AugmentedImage image)
     {
         AugmentedImageVisualizer visualizer;
         _visualizers.TryGetValue(image.DatabaseIndex, out visualizer);
-        return visualizer;
+        return visualizer; 
     }
 }

@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GoogleARCore/Examples/HelloAR/Scenes/HelloAR.unity
     guid: e6a6fa04348cb45c9b0221eb19c946da
-  - enabled: 1
+  - enabled: 0
     path: Assets/GoogleARCore/Examples/ObjectManipulation/Scenes/ObjectManipulation.unity
     guid: 9dba7e74f4d2b410f90b920f80528d44
+  - enabled: 1
+    path: Assets/LJM/Scenes/LJM.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
